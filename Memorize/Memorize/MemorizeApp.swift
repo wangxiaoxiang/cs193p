@@ -2,16 +2,18 @@
 //  MemorizeApp.swift
 //  Memorize
 //
-//  Created by 汪潇翔 on 2022/3/30.
+//  Created by Xiaoxiao on 2022/3/30.
 //
 
 import SwiftUI
 
 @main
 struct MemorizeApp: App {
+    private let game = EmojiMemoryGame()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EmojiMemoryGameView(game: game)
         }
     }
 }
