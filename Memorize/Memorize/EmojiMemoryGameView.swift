@@ -11,7 +11,18 @@ struct EmojiMemoryGameView: View {
     @ObservedObject var game: EmojiMemoryGame
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        gameBody
+    }
+    
+    var gameBody: some View {
+        AspectVGrid(items: game.cards, aspectRatio: 2/3) { card in
+            ZStack {
+                RoundedRectangle(cornerRadius: 10)
+                    .fill()
+                    .foregroundColor(.brown)
+                Text(card.content)
+            }
+        }
     }
 }
 
