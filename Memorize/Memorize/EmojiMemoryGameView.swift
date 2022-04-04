@@ -16,12 +16,7 @@ struct EmojiMemoryGameView: View {
     
     var gameBody: some View {
         AspectVGrid(items: game.cards, aspectRatio: 2/3) { card in
-            ZStack {
-                RoundedRectangle(cornerRadius: 10)
-                    .fill()
-                    .foregroundColor(.brown)
-                Text(card.content)
-            }
+           CardView(card: card)
         }
     }
 }
